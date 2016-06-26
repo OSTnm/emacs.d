@@ -6,7 +6,7 @@
 ;;;### (autoloads (helm-do-ag-buffers helm-ag-buffers helm-do-ag-project-root
 ;;;;;;  helm-ag-project-root helm-do-ag helm-do-ag-this-file helm-ag
 ;;;;;;  helm-ag-this-file helm-ag-mode helm-ag-clear-stack helm-ag-pop-stack)
-;;;;;;  "helm-ag" "helm-ag.el" (22380 3099 771313 386000))
+;;;;;;  "helm-ag" "helm-ag.el" (22383 23931 474448 854000))
 ;;; Generated autoloads from helm-ag.el
 
 (autoload 'helm-ag-pop-stack "helm-ag" "\
@@ -69,7 +69,8 @@ Special commands:
 
 ;;;***
 
-;;;### (autoloads nil nil ("helm-ag-pkg.el") (22380 3099 779627 769000))
+;;;### (autoloads nil nil ("helm-ag-pkg.el") (22383 23931 478618
+;;;;;;  312000))
 
 ;;;***
 

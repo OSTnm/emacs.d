@@ -77,3 +77,11 @@ GTAGS
 *.orig
 *~
 \#*#
+
+
+*.elc
+*.patch
+*.diff
+Home.md
+TAGS
+ID

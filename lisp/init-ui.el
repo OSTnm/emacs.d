@@ -7,4 +7,10 @@
 ;; close splash screen
 (setq inhibit-splash-screen 1)
 
+;; set font
+(font-lock-add-keywords
+ 'c-mode
+ '(("\\<\\(\\sw+\\) ?(" l 'font-lock-function-name-face)))
+
+
 (provide 'init-ui)

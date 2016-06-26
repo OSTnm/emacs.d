@@ -130,6 +130,11 @@ Also affects 'linum-mode' background."
        (monokai-green-l          "#BBEF53")
        (monokai-gray-d           "#35331D")
        (monokai-gray-l           "#7B7962")
+	   ;; Custom colors
+	   (monokai-grey+2           "#403D3D")
+	   (monokai-fg+1             "#F8F8F0")
+	   (monokai-bg+1             "#1B1D1E")
+	   (monokai-comments+1       "#E6DB74")
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
        (monokai-bg               "#272822")
@@ -241,7 +246,7 @@ Also affects 'linum-mode' background."
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
    `(font-lock-comment-face
-     ((,class (:foreground ,monokai-comments
+     ((,class (:foreground ,monokai-comments+1
                            :background nil))
       (,terminal-class (:foreground ,terminal-monokai-comments))))
 
@@ -317,8 +322,8 @@ Also affects 'linum-mode' background."
    '(button ((t (:underline t))))
 
    `(default
-      ((,class (:foreground ,monokai-fg
-                            :background ,monokai-bg))
+      ((,class (:foreground ,monokai-fg+1
+                            :background ,monokai-bg+1))
        (,terminal-class (:foreground ,terminal-monokai-fg
                                      :background ,terminal-monokai-bg))))
 
@@ -336,7 +341,7 @@ Also affects 'linum-mode' background."
 
    `(region
      ((,class (:inherit highlight
-                        :background ,monokai-highlight))
+                        :background ,monokai-grey+2))
       (,terminal-class (:inherit highlight
                                  :background ,terminal-monokai-highlight))))
 
