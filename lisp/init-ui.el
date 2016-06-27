@@ -10,7 +10,7 @@
 ;; set font
 (font-lock-add-keywords
  'c-mode
- '(("\\<\\(\\sw+\\) ?(" l 'font-lock-function-name-face)))
+ '(("\\<\\(\\sw+\\) ?(" 1 'font-lock-function-name-face)))
 
 
 (provide 'init-ui)

@@ -12,6 +12,10 @@
 ;; set lisp load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; setup elim
+;;(add-to-list 'load-path "~/elisp/elim")
+;;(autoload 'garak "garak" nil t)
+
 ;; set env PATH
 (setenv "PATH" (concat "~/.emacs.d/bin:" (getenv "PATH")))
 

@@ -1,1 +1,1 @@
-("~/.emacs.d/")
+("~/.emacs.d/" "/home/emacs-24.5/")
