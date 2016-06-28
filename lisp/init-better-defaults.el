@@ -7,8 +7,14 @@
 ;; show column
 (column-number-mode t)
 
+;; show trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ;; y or n
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; hl line mode
+(global-hl-line-mode t)
 
 ;; close auto save
 (setq auto-save-default nil)
