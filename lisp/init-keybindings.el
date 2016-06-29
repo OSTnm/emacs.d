@@ -1,7 +1,6 @@
 (global-set-key (kbd "<f2>")
 				(lambda() (interactive) (find-file "~/.emacs.d/init.el")))
 
-
 ;; prev 5 next 5
 (global-set-key (kbd "C-M-p")
 				(lambda() (interactive)
@@ -78,7 +77,13 @@
 (let ((map helm-command-map))
   (define-key map (kbd "I") 'helm-imenu-anywhere))
 
+;; iedit
+(require 'iedit)
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
 ;; better default region buffer
-(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+(global-set-key (kbd "C-M-\\") 'ostnm/indent-region-or-buffer)
+
+
 
 (provide 'init-keybindings)

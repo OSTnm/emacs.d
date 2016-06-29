@@ -42,28 +42,28 @@
 (setq dired-dwim-target t)
 
 ;; better indent region
-(defun indent-buffer()
+(defun ostnm/indent-buffer()
   (interactive)
   (indent-region (point-min) (point-max)))
 
-(defun indent-region-or-buffer()
+(defun ostnm/indent-region-or-buffer()
   (interactive)
   (save-current-buffer
 	(if (region-active-p)
 		(progn (indent-region (region-beginning) (region-end))
 			   (message "indent region edit by ostnm"))
-	  (progn (indent-buffer)
+	  (progn (ostnm/indent-buffer)
 			 (message "indent buffer edit by ostnm")))))
 
 ;; dos process
-(defun hidden-dos-eol ()
+(defun ostnm/hidden-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
   (interactive)
   (unless buffer-display-table
     (setq buffer-display-table (make-display-table)))
   (aset buffer-display-table ?\^M []))
 
-(defun remove-dos-eol ()
+(defun ostnm/remove-dos-eol ()
   "Replace DOS eolns CR LF with Unix eolns CR"
   (interactive)
   (goto-char (point-min))
