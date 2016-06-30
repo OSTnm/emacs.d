@@ -84,6 +84,12 @@
 ;; better default region buffer
 (global-set-key (kbd "C-M-\\") 'ostnm/indent-region-or-buffer)
 
+;; org mode
+
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 
 (provide 'init-keybindings)

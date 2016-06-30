@@ -167,4 +167,7 @@
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (js2r-add-keybindings-with-prefix "C-c C-m")
 
+;; org-pomodoro
+(require 'org-pomodoro)
+
 (provide 'init-packages)
