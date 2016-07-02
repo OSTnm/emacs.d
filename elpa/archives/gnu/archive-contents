@@ -145,6 +145,11 @@
 	       nil "Major mode for CoffeeScript files" single
 	       ((:url . "http://github.com/defunkt/coffee-mode")
 		(:keywords "coffeescript" "major" "mode"))])
+ (compact-docstrings .
+		     [(0 1)
+		      nil "Shrink blank lines in docstrings and doc comments" single
+		      ((:url . "https://github.com/cpitclaudel/compact-docstrings")
+		       (:keywords "convenience" "faces" "lisp" "maint" "c"))])
  (company .
 	  [(0 9 0)
 	   ((emacs
