@@ -170,4 +170,9 @@
 ;; org-pomodoro
 (require 'org-pomodoro)
 
+;; column enforce mode
+(require 'column-enforce-mode)
+(add-hook 'c-mode-hook 'column-enforce-mode)
+
+
 (provide 'init-packages)

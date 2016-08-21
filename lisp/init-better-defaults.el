@@ -69,7 +69,22 @@
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
 
+;; tab settings
+(setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
 
-
+;; delete trailing-whitespace mathching by regxp in certatin dir
+(require 'find-lisp)
+(defun ostnm/delete-trailing-whitespace (dir pattern)
+  (interactive
+   "DFind-name (directory): \nsFind-name (filename wildcard): ")
+  (mapc (lambda(x)
+          (switch-to-buffer (find-file x))
+          ;; unset read-only-mode
+          (setq buffer-read-only nil)
+          (delete-trailing-whitespace (point-min) nil)
+          (save-buffer))
+        (find-lisp-find-files dir pattern)))
 
 (provide 'init-better-defaults)
