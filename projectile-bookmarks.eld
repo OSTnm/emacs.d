@@ -1,1 +1,1 @@
-("~/.emacs.d/" "/home/strace-4.13/" "/home/emacs-24.5/")
+("~/.emacs.d/" "/home/bash-4.4-rc2/" "/home/org/" "/home/strace-4.13/" "/home/emacs-24.5/")
