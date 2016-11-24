@@ -5,3 +5,21 @@ ls
 cat /etc/passwd-
 cat /etc/passwd |grep "^[0-9]"
 cat /etc/passwd |grep "^[0-9]"
+gcc 1.c
+./a.out
+gcc 1.c
+gcc 1.c
+gcc 1.c
+gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c
+1.c:1:19: fatal error: stdio.h: No such file or directory
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+/opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32

@@ -1,1 +1,1 @@
-("~/.emacs.d/" "/home/bash-4.4-rc2/" "/home/org/" "/home/strace-4.13/" "/home/emacs-24.5/")
+("~/.emacs.d/" "/home/kernel/linux-2.6.11.1/" "/home/kernel/linux-2.6.18/" "/home/kernel/linux-2.6.39/" "/home/org/" "/home/bash-4.4-rc2/" "/home/strace-4.13/" "/home/emacs-24.5/" "/home/linux-4.9-rc6/arch/x86/" "/home/linux-4.9-rc6/")
