@@ -6,13 +6,27 @@
  '(company-tooltip-idle-delay 0.08)
  '(custom-safe-themes
    (quote
-    ("c59857e3e950131e0c17c65711f1812d20a54b829115b7c522672ae6ba0864cc" default)))
+    ("d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" "c59857e3e950131e0c17c65711f1812d20a54b829115b7c522672ae6ba0864cc" default)))
+ '(ecb-auto-activate t)
+ '(ecb-auto-expand-tag-tree (quote all))
+ '(ecb-auto-update-methods-after-save t)
+ '(ecb-layout-name "left9")
+ '(ecb-layout-window-sizes
+   (quote
+    (("left9"
+      (ecb-methods-buffer-name 0.12871287128712872 . 0.9833333333333333)))))
+ '(ecb-options-version "2.50")
+ '(ecb-tip-of-the-day nil)
+ '(ecb-toggle-layout-sequence (quote ("left9")))
+ '(font-lock-global-modes (quote (not speedbar-mode)))
  '(package-selected-packages
    (quote
-    (irony yaxception xcscope window-numbering window+ which-key web-mode web-beautify undo-tree smartparens s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro monokai-theme markdownfmt markdown-preview-eww markdown-mode+ magit js2-refactor ivy irony-eldoc imenu-anywhere iedit hungry-delete hippie-exp-ext highlight-parentheses helm-swoop helm-smex helm-projectile helm-mode-manager helm-make helm-ls-git helm-gtags helm-filesets helm-descbinds helm-company helm-c-yasnippet helm-ag flylisp flycheck-package flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc buttercup bug-hunter awk-it avy-menu abl-mode))))
+    (font-lock-studio font-utils modern-cpp-font-lock figlet rainbow-delimiters color-identifiers-mode rainbow-identifiers cmake-font-lock preproc-font-lock minimap yasnippet-snippets java-imports java-snippets javadoc-lookup ac-emacs-eclim zoom nav irony yaxception xcscope window-numbering window+ which-key web-mode web-beautify smartparens s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro monokai-theme markdownfmt markdown-preview-eww markdown-mode+ magit js2-refactor ivy irony-eldoc imenu-anywhere iedit hungry-delete hippie-exp-ext highlight-parentheses helm-swoop helm-smex helm-projectile helm-mode-manager helm-make helm-ls-git helm-gtags helm-filesets helm-descbinds helm-company helm-c-yasnippet helm-ag flylisp flycheck-package flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc buttercup bug-hunter awk-it avy-menu abl-mode)))
+ '(rainbow-identifiers-choose-face-function (quote ostnm/rainbow-identifiers-predefined-choose-face)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(font-lock-comment-face ((t (:foreground "#E6DB74"))))
+ '(font-lock-function-name-face ((t (:foreground "#A6E22E" :height 1.3)))))

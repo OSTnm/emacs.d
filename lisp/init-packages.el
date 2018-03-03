@@ -174,5 +174,20 @@
 (require 'column-enforce-mode)
 (add-hook 'c-mode-hook 'column-enforce-mode)
 
+;; ecb for c
+(require 'ecb)
+
+;; rainbow-delimiters-mode
+(require 'rainbow-delimiters)
+(add-hook 'c-mode-hook 'rainbow-delimiters-mode)
+
+;; rainbow-identifier-mode
+(require 'rainbow-identifiers)
+;; (add-hook 'c-mode-hook 'rainbow-identifiers-mode)
+
+(defun ostnm/rainbow-identifiers-predefined-choose-face (hash)
+  "Use HASH to choose one of the `rainbow-identifiers-identifier-N' faces."
+  (intern-soft "rainbow-identifiers-identifier-9"))
+;; (setq rainbow-identifiers-predefined-choose-face ostnm/rainbow-identifiers-predefined-choose-face)
 
 (provide 'init-packages)
