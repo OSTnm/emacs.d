@@ -21,7 +21,7 @@
  '(font-lock-global-modes (quote (not speedbar-mode)))
  '(package-selected-packages
    (quote
-    (font-lock-studio font-utils modern-cpp-font-lock figlet rainbow-delimiters color-identifiers-mode rainbow-identifiers cmake-font-lock preproc-font-lock minimap java-imports java-snippets javadoc-lookup ac-emacs-eclim zoom nav irony yaxception xcscope window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc buttercup bug-hunter awk-it avy-menu abl-mode)))
+    (font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav irony yaxception window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc bug-hunter awk-it avy-menu)))
  '(rainbow-identifiers-choose-face-function (quote ostnm/rainbow-identifiers-predefined-choose-face)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -98,10 +98,10 @@
 (add-hook 'irony-mode-hook 'irony-eldoc)
 
 ;; cscope
-(require 'xcscope)
-(cscope-setup)
-(add-hook 'asm-mode-hook (function cscope-minor-mode))
-(setq cscope-option-do-not-update-database t)
+;; (require 'xcscope)
+;; (cscope-setup)
+;; (add-hook 'asm-mode-hook (function cscope-minor-mode))
+;; (setq cscope-option-do-not-update-database t)
 
 ;; anaconda
 (require 'anaconda-mode)
