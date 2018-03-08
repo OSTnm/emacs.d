@@ -85,11 +85,16 @@
 (global-set-key (kbd "C-M-\\") 'ostnm/indent-region-or-buffer)
 
 ;; org mode
-
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; gradle mode
+(defun ostnm/gradle-build-and-run ()
+  (interactive)
+  (gradle-run "build run"))
+
+(define-key gradle-mode-map (kbd "C-c C-r") 'ostnm/gradle-build-and-run)
 
 (provide 'init-keybindings)

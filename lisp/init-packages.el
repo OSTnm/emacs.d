@@ -190,4 +190,16 @@
   (intern-soft "rainbow-identifiers-identifier-9"))
 ;; (setq rainbow-identifiers-predefined-choose-face ostnm/rainbow-identifiers-predefined-choose-face)
 
+;; eclim for java
+(require 'eclim)
+(add-hook 'java-mode-hook 'eclim-mode)
+
+;; gradle-mode for java
+(require 'gradle-mode)
+(add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
+
+;; company-emacs-eclim for java
+(require 'company-emacs-eclim)
+(company-emacs-eclim-setup)
+
 (provide 'init-packages)

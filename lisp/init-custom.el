@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-eclim-executable nil)
  '(company-tooltip-idle-delay 0.08)
  '(custom-safe-themes
    (quote
@@ -18,10 +19,12 @@
  '(ecb-options-version "2.50")
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left9")))
+ '(eclim-executable "/Applications/Eclipse.app/Contents/Eclipse/eclim")
+ '(eclimd-executable "/Applications/Eclipse.app/Contents/Eclipse/eclimd")
  '(font-lock-global-modes (quote (not speedbar-mode)))
  '(package-selected-packages
    (quote
-    (font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav irony yaxception window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc bug-hunter awk-it avy-menu)))
+    (company-emacs-eclim common-lisp-snippets flycheck-gradle gradle-mode font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav irony yaxception window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto popwin org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ess ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc bug-hunter awk-it avy-menu)))
  '(rainbow-identifiers-choose-face-function (quote ostnm/rainbow-identifiers-predefined-choose-face)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

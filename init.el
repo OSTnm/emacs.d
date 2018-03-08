@@ -34,14 +34,5 @@
 (require 'init-org)
 (require 'init-keybindings)
 
-
-;; (require 'highlight)
-;; (semantic-mode 1)
-;; (require 'semantic/bovine/c nil 'noerror)
-;; (load-file "~/.emacs.d/lisp/region-list-edit.el")
-;; (load-file "~/.emacs.d/lisp/zjl-hl.el")
-;; (zjl-hl-enable-global 'c-mode)
-
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 (load-file custom-file)
-
