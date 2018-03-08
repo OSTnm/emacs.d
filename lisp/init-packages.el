@@ -175,7 +175,7 @@
 (add-hook 'c-mode-hook 'column-enforce-mode)
 
 ;; ecb for c
-(require 'ecb)
+;; (require 'ecb)
 
 ;; rainbow-delimiters-mode
 (require 'rainbow-delimiters)
@@ -201,5 +201,9 @@
 ;; company-emacs-eclim for java
 (require 'company-emacs-eclim)
 (company-emacs-eclim-setup)
+
+;; imenu list
+(require 'imenu-list)
+(add-hook 'c-mode-hook 'imenu-list-minor-mode)
 
 (provide 'init-packages)
