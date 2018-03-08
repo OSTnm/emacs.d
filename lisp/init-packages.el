@@ -190,12 +190,19 @@
   (intern-soft "rainbow-identifiers-identifier-9"))
 ;; (setq rainbow-identifiers-predefined-choose-face ostnm/rainbow-identifiers-predefined-choose-face)
 
+
+;; gradle&&eclim need to be installed manually
 ;; eclim for java
+
+;; noted that bydefault eclim.bin only set symlink "eclimd" inside eclipse, need to set symlink "eclim" manually
+
 (require 'eclim)
 (add-hook 'java-mode-hook 'eclim-mode)
 
 ;; gradle-mode for java
 (require 'gradle-mode)
+;; build.gradle for java
+;; project.clj  for clojure
 (add-hook 'java-mode-hook '(lambda() (gradle-mode 1)))
 
 ;; company-emacs-eclim for java
@@ -205,5 +212,10 @@
 ;; imenu list
 (require 'imenu-list)
 (add-hook 'c-mode-hook 'imenu-list-minor-mode)
+
+;; cider
+(unless (package-installed-p 'cider)
+  (package-install 'cider))
+(require 'cider-mode)
 
 (provide 'init-packages)
