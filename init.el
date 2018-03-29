@@ -40,6 +40,7 @@
 (setq temporary-file-directory (getenv "TMPDIR"))
 (call-process "mkdir" nil nil nil "-p" temporary-file-directory)
 
+(require 'cflow-mode)
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-defaults)

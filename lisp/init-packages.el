@@ -180,6 +180,8 @@
 ;; rainbow-delimiters-mode
 (require 'rainbow-delimiters)
 (add-hook 'c-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'java-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
 
 ;; rainbow-identifier-mode
 (require 'rainbow-identifiers)
@@ -214,8 +216,32 @@
 (add-hook 'c-mode-hook 'imenu-list-minor-mode)
 
 ;; cider
+;; clojure - lein new foo to create new project
+;; cider-jack-in to create repl server to get interactive interface
 (unless (package-installed-p 'cider)
   (package-install 'cider))
 (require 'cider-mode)
+
+(defvar cmd nil nil)
+(defvar cflow-buf nil nil)
+(defvar cflow-buf-name nil nil)
+
+(require 'cflow-mode)
+(defun ostnm/cflow-function (function-name)
+  "Get call graph of inputed function. "
+  (interactive "sFunction name:\n")
+  (setq cmd (format "cflow  -b --main=%s %s" function-name buffer-file-name))
+  (setq cflow-buf-name (format "**cflow-%s:%s**"
+                               (file-name-nondirectory buffer-file-name)
+                               function-name))
+  (setq cflow-buf (get-buffer-create cflow-buf-name))
+  (set-buffer cflow-buf)
+  (setq buffer-read-only nil)
+  (erase-buffer)
+  (insert (shell-command-to-string cmd))
+  (pop-to-buffer cflow-buf)
+  (goto-char (point-min))
+  (cflow-mode)
+  )
 
 (provide 'init-packages)
