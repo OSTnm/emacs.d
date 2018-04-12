@@ -27,7 +27,7 @@
  '(imenu-list-size 0.1)
  '(package-selected-packages
    (quote
-    (helm-cider cider imenu-list company-emacs-eclim common-lisp-snippets flycheck-gradle gradle-mode font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav irony yaxception window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc bug-hunter awk-it avy-menu)))
+    (call-graph malinka origami helm-cider cider imenu-list company-emacs-eclim common-lisp-snippets flycheck-gradle gradle-mode font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav irony yaxception window-numbering window+ s-buffer quickrun python-mode pyenv-mode-auto org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor iedit hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-make helm-gtags helm-filesets helm-company helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck expand-region exec-path-from-shell ecb company-irony-c-headers company-irony company-go company-anaconda column-enforce-mode clang-format c-eldoc bug-hunter awk-it avy-menu)))
  '(rainbow-identifiers-choose-face-function (quote ostnm/rainbow-identifiers-predefined-choose-face)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
