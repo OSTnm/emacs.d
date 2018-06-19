@@ -48,7 +48,8 @@ def main():
         print(poss[0].get_text())
         de_lis = tr.find_all('div', 'de_li1 de_li3')
         for de_li in de_lis:
-            print(de_li.get_text().strip())
+            if -1 == de_li.parent['class'][0].find('gl_none'):
+                print(de_li.get_text().strip())
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
