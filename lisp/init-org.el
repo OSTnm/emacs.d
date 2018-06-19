@@ -6,7 +6,14 @@
   (setq org-capture-templates
 		'(("t" "Todo" entry (file+headline "~/.emacs.d/gtd.org" "schedule")
 		   "* TODO [#B] %?\n  %i\n"
-		   :empty-lines 1))))
+		   :empty-lines 1)))
+  (setq org-startup-with-inline-images t)
+  (setq org-todo-keywords
+  '((sequence "TODO"
+      "IN PROGRESS"
+      "|"
+      "DONE"
+      "CANCELLED"))))
 
 (setq org-src-fontify-natively t)
 (setq org-export-html-postamble nil)

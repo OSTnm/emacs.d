@@ -1,10 +1,10 @@
 ;;; web-beautify-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "web-beautify" "web-beautify.el" (22582 63479
-;;;;;;  544879 73000))
+;;;### (autoloads nil "web-beautify" "web-beautify.el" (23336 58499
+;;;;;;  0 0))
 ;;; Generated autoloads from web-beautify.el
 
 (autoload 'web-beautify-html "web-beautify" "\

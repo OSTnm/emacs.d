@@ -244,4 +244,9 @@
   (cflow-mode)
   )
 
+(defun ostnm/bing-dict-ee (word)
+  "Get english explaination of word. "
+  (interactive "sWord:\n")
+  (insert (shell-command-to-string (concat "LC_CTYPE=UTF-8 translate.py " word))))
+
 (provide 'init-packages)

@@ -23,3 +23,41 @@ gcc 1.c -m32
 /opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
 /opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
 /opt/cross/gcc-4.6.3-nolibc/i386-linux/bin/i386-linux-gcc 1.c -m32
+ls
+./translate.py got
+./translate.py got
+./translate.py got
+./translate.py got
+./translate.py got
+./translate.py got
+./translate.py got
+File "./translate.py", line 41, in main
+./translate.py got
+ls
+./translate.py  got
+./translate.py  got
+./translate.py  got
+./translate.py  got
+./translate.py  got
+./translate.py  got
+./translate.py  got
+./translate.py  got
+PYTHONENCODING=utf-8 python3 translate got
+PYTHONENCODING=utf-8 python3 translate.py got
+PYTHONENCODING=utf-8 python3 translate.py got
+PYTHONENCODING=utf-8 python3 translate.py got
+PYTHONENCODING=utf-8 python3 translate.py got
+PYTHONENCODING=utf-8 python3 translate.py got
+./translate.py got
+./translate.py got
+NameError: name 'unicode' is not defined
+./translate.py got
+./translate.py got
+./translate.py got
+./translate.py got
+en
+env
+env |grep UTF
+export LC_CTYPE=UTF-8
+env |grep UTF
+./translate.py got
