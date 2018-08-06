@@ -6,8 +6,15 @@
         c-electric-semi&comma
         hungry-delete-backward
         hungry-delete-forward
+        org-beginning-of-line
+        org-end-of-line
+        org-force-self-insert
+        org-kill-line
+        org-self-insert-command
+        org-yank
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        iedit-switch-to-mc-mode
         ))

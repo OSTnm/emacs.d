@@ -33,4 +33,5 @@
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
+(add-hook 'org-mode-hook (lambda () (linum-mode 0)))
 (provide 'init-org)
