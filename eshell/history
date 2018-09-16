@@ -61,3 +61,9 @@ env |grep UTF
 export LC_CTYPE=UTF-8
 env |grep UTF
 ./translate.py got
+lua
+sudo port install lua
+lua
+ls
+go run ./s04.go 
+go run ./s04.go 
