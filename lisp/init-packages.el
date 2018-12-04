@@ -249,4 +249,19 @@
   (interactive "sWord:\n")
   (insert (shell-command-to-string (concat "LC_CTYPE=UTF-8 translate.py " word))))
 
+;; This is an Emacs package that creates graphviz directed graphs from
+;; the headings of an org file
+;; mind map
+(require 'ox)
+(require 'ox-org)
+(require 'org-mind-map)
+(setq org-mind-map-engine "dot")       ; Default. Directed Graph
+;; (setq org-mind-map-engine "neato")  ; Undirected Spring Graph
+;; (setq org-mind-map-engine "twopi")  ; Radial Layout
+;; (setq org-mind-map-engine "fdp")    ; Undirected Spring Force-Directed
+;; (setq org-mind-map-engine "sfdp")   ; Multiscale version of fdp for the layout of large graphs
+;; (setq org-mind-map-engine "twopi")  ; Radial layouts
+;; (setq org-mind-map-engine "circo")  ; Circular Layout
+
+
 (provide 'init-packages)
