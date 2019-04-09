@@ -91,6 +91,10 @@
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; goto-line-preview
+(require 'goto-line-preview)
+(global-set-key [remap goto-line] 'goto-line-preview)
+
 ;; gradle mode
 (defun ostnm/gradle-build-and-run ()
   (interactive)

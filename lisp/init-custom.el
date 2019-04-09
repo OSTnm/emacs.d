@@ -36,7 +36,7 @@
       (:strike-through t)))))
  '(package-selected-packages
    (quote
-    (math-symbols org-mind-map luarocks company-lua flymake-lua org-bullets org-page malinka origami helm-cider common-lisp-snippets gradle-mode font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav yaxception window-numbering window+ s-buffer quickrun pyenv-mode-auto org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-gtags helm-filesets helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck company-irony-c-headers column-enforce-mode clang-format bug-hunter awk-it)))
+    (move-text goto-line-preview math-symbols org-mind-map luarocks company-lua flymake-lua org-bullets org-page malinka origami helm-cider common-lisp-snippets gradle-mode font-lock-studio figlet rainbow-delimiters rainbow-identifiers preproc-font-lock java-imports java-snippets javadoc-lookup zoom nav yaxception window-numbering window+ s-buffer quickrun pyenv-mode-auto org-pomodoro markdownfmt markdown-preview-eww markdown-mode+ js2-refactor hippie-exp-ext helm-swoop helm-smex helm-mode-manager helm-gtags helm-filesets helm-c-yasnippet helm-ag flylisp flycheck-irony flycheck-clangcheck company-irony-c-headers column-enforce-mode clang-format bug-hunter awk-it)))
  '(rainbow-identifiers-choose-face-function (quote ostnm/rainbow-identifiers-predefined-choose-face)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

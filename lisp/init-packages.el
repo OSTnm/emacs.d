@@ -222,6 +222,15 @@
   (package-install 'cider))
 (require 'cider-mode)
 
+;; goto-line-preview
+(require 'goto-line-preview)
+(global-set-key [remap goto-line] 'goto-line-preview)
+
+;; move-text
+(require 'move-text)
+(move-text-default-bindings)
+
+
 (defvar cmd nil nil)
 (defvar cflow-buf nil nil)
 (defvar cflow-buf-name nil nil)
