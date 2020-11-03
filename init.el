@@ -1,9 +1,3 @@
-;; package
-;; (when (>= emacs-major-version 24)
-;;   (require 'package)
-;;   (package-initialize)
-;;   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t))
-
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -40,7 +34,6 @@
 (setq temporary-file-directory (getenv "TMPDIR"))
 (call-process "mkdir" nil nil nil "-p" temporary-file-directory)
 
-(require 'cflow-mode)
 (require 'init-packages)
 (require 'init-ui)
 (require 'init-better-defaults)
@@ -50,3 +43,4 @@
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 (load-file custom-file)
 (put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)

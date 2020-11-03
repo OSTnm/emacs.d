@@ -3,10 +3,13 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        c-electric-brace
         c-electric-semi&comma
+        c-electric-slash
         hungry-delete-backward
         hungry-delete-forward
         org-beginning-of-line
+        org-cycle
         org-end-of-line
         org-force-self-insert
         org-kill-line

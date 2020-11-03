@@ -73,14 +73,9 @@
 ;; helm-company
 (define-key company-active-map (kbd "C-:") 'helm-company)
 
-;; imenu anywhere
-(require 'imenu-anywhere)
-(let ((map helm-command-map))
-  (define-key map (kbd "I") 'helm-imenu-anywhere))
-
 ;; iedit
-(require 'iedit)
-(global-set-key (kbd "M-s e") 'iedit-mode)
+;; (require 'iedit)
+;; (global-set-key (kbd "M-s e") 'iedit-mode)
 
 ;; better default region buffer
 (global-set-key (kbd "C-M-\\") 'ostnm/indent-region-or-buffer)
@@ -94,12 +89,5 @@
 ;; goto-line-preview
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
-
-;; gradle mode
-(defun ostnm/gradle-build-and-run ()
-  (interactive)
-  (gradle-run "build run"))
-
-(define-key gradle-mode-map (kbd "C-c C-r") 'ostnm/gradle-build-and-run)
 
 (provide 'init-keybindings)

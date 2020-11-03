@@ -5,7 +5,7 @@
 (scroll-bar-mode -1)
 
 ;; set font
-(set-default-font "Inconsolata")
+(set-frame-font "Inconsolata")
 
 ;; close splash screen
 (setq inhibit-splash-screen 1)
