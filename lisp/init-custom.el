@@ -33,7 +33,7 @@
       (:strike-through t))))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
-   '(quickrun helm-company company company-box flycheck multiple-cursors org-download rainbow-delimiters smartparens undo-tree magit hungry-delete yasnippet-snippets monokai-theme lsp-java move-text goto-line-preview yaxception window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
+   '(quickrun helm-company company company-box flycheck multiple-cursors org-download rainbow-delimiters smartparens undo-tree magit hungry-delete yasnippet-snippets monokai-theme lsp-java move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
  '(rainbow-identifiers-choose-face-function 'ostnm/rainbow-identifiers-predefined-choose-face))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
