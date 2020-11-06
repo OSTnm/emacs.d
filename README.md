@@ -64,12 +64,18 @@ Numbered window shortcuts for emacs.
 ### Programming
 * [yasnippet](https://github.com/joaotavora/yasnippet)
 A template system that allows you to type an abbreviation and automatically expand it into function templates.
-+ [yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
-The official collection of snippets for yasnippet.
-* [helm-c-yasnippet](https://github.com/emacs-jp/helm-c-yasnippet)
-Helm source for yasnippet.el
-* [lsp-java](https://github.com/emacs-lsp/lsp-java)
-Emacs java ide using eclipse jdt language server.
+  + [yasnippet-snippets](https://github.com/AndreaCrotti/yasnippet-snippets)
+  The official collection of snippets for yasnippet.
+  * [helm-c-yasnippet](https://github.com/emacs-jp/helm-c-yasnippet)
+  Helm source for yasnippet.el
+* [lsp-mode](https://github.com/emacs-lsp/lsp-mode)
+Emacs client for the Language Server Protocol.
+  + [lsp-java](https://github.com/emacs-lsp/lsp-java)
+  Emacs java ide using eclipse jdt language server.
+  + [lsp-ui](https://github.com/emacs-lsp/lsp-ui)
+  An extension which adds code lenses and documentation pop-up for lsp-mode
+  + [lsp-treemacs](https://github.com/emacs-lsp/lsp-treemacs)
+  Integration between lsp-mode and treemacs and implementation of treeview controls using treemacs as a tree renderer.
 * [quickrun](https://github.com/emacsorphanage/quickrun)
 Execute editing buffer.
 * [smartparens](https://github.com/Fuco1/smartparens)
@@ -99,6 +105,10 @@ Interacting with git.
 * [org-download](https://github.com/abo-abo/org-download)
 Drag and drop images to emacs org-mode.
 
+### Keys Cheat Sheet
+* [which-key](https://github.com/justbur/emacs-which-key)
+Display available key bindings in popup. Rewrite of guide-key with added features to improve display.
+
 ## Useful scripts
 * [bing-dict-ee](./lisp/init-packages.el) + [translate](./bin/translate.py)
 Bing translator in buffer.
@@ -110,8 +120,8 @@ Unix2dos.
 Indent region.
 * [delete-trailing-whitespace](./lisp/init-better-defaults.el)
 Delete trailing-whitespace mathching by regxp in certatin directory.
-* [c-funcall-name-face](./lisp/init-ui.el)
-Highlight c function defintion.
+* [font-lock-function-name-face](./lisp/init-custom.el)
+Highlight c function name.
 
 ## Dependency
 * cflow

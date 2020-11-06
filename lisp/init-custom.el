@@ -33,12 +33,13 @@
       (:strike-through t))))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
-   '(quickrun helm-company company company-box flycheck multiple-cursors org-download rainbow-delimiters smartparens undo-tree magit hungry-delete yasnippet-snippets monokai-theme lsp-java move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
+   '(lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
  '(rainbow-identifiers-choose-face-function 'ostnm/rainbow-identifiers-predefined-choose-face))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-function-name-face ((t (:foreground "#A6E22E" :weight bold :height 1.3))))
  '(imenu-list-entry-face-0 ((t (:inherit imenu-list-entry-face :foreground "light green"))))
  '(imenu-list-entry-face-1 ((t (:inherit imenu-list-entry-face :foreground "gold")))))
