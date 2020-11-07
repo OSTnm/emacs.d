@@ -4,6 +4,9 @@
 ;; close scroll bar
 (scroll-bar-mode -1)
 
+;; close menu bar
+(menu-bar-mode -1)
+
 ;; set font
 (set-frame-font "Inconsolata")
 

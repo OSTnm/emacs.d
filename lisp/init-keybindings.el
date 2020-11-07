@@ -90,4 +90,6 @@
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
 
+;; lsp
+
 (provide 'init-keybindings)

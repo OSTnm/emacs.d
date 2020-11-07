@@ -33,6 +33,7 @@
 ;; company
 (global-company-mode t)
 (setq company-show-numbers t)
+(setq company-auto-complete 'company-explicit-action-p)
 
 ;; flycheck
 (require 'flycheck)
@@ -53,24 +54,6 @@
 
 ;; auto load init file
 (global-auto-revert-mode t)
-
-;; lsp mode
-(add-hook 'c-mode-hook 'lsp)
-(add-hook 'cpp-mode-hook 'lsp)
-
-(setq gc-cons-threshold (* 100 1024 1024)
-      read-process-output-max (* 1024 1024)
-      treemacs-space-between-root-nodes nil
-      company-idle-delay 0.0
-      company-minimum-prefix-length 1
-      lsp-idle-delay 0.1 ;; clangd is fast
-      ;; be more ide-ish
-      lsp-headerline-breadcrumb-enable t)
-
-(with-eval-after-load 'lsp-mode
-  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
-  (require 'dap-cpptools)
-  (yas-global-mode))
 
 (defun my-toggle-web-indent ()
   (interactive)
@@ -117,6 +100,125 @@
 (require 'org-download)
 ;; Drag-and-drop to `dired`
 (add-hook 'dired-mode-hook 'org-download-enable)
+
+;; lsp mode
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'cpp-mode-hook 'lsp)
+
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024)
+      treemacs-space-between-root-nodes nil
+      company-minimum-prefix-length 1
+      lsp-idle-delay 0.1 ;; clangd is fast
+      ;; be more ide-ish
+      lsp-headerline-breadcrumb-enable t)
+
+;; lsp mode
+(use-package
+  lsp-mode
+  :ensure t
+  :defer t
+  :hook ((lsp-mode . lsp-enable-which-key-integration))
+  :init ;;
+  ;; (setq lsp-auto-configure nil)
+  (setq lsp-prefer-capf t)
+  (setq lsp-enable-snippet t)
+  (setq lsp-enable-completion-at-point t)
+  (setq lsp-keymap-prefix "C-c s")
+  (add-hook 'c++-mode-hook #'lsp)
+  (add-hook 'c-mode-hook #'lsp)
+  (setq lsp-keep-workspace-alive t)
+  (setq lsp-enable-file-watchers nil)
+  (setq lsp-enable-semantic-highlighting nil)
+  (setq lsp-enable-symbol-highlighting nil)
+  :bind (:map lsp-mode-map
+              ([remap xref-find-definitions] . lsp-find-definition)
+              ([remap xref-find-references] . lsp-find-references)
+              ("C-S-<down-mouse-1>" . xref-pop-marker-stack)
+              ("C-S-<mouse-1>" . ignore)
+              ("C-s l .:" . lsp-find-definition)
+              ("C-s l ," . xref-pop-marker-stack)
+              ("C-s l ?" . lsp-find-references)
+              ("C-s l d" . lsp-find-declaration)
+              ("C-s l i" . lsp-find-implementation)
+              ("C-s l t" . lsp-find-type-definition)
+              ("C-s l g" . lsp-find-definition)
+              ("C-s l r" . lsp-find-references)
+              ("C-s l h" . lsp-describe-thing-at-point))
+  )
+
+(use-package
+  lsp-ui
+  :ensure t
+  :after lsp-mode
+  :commands lsp-ui-mode
+  :custom (lsp-ui-doc-position (quote bottom))
+  ;; (lsp-ui-doc-use-webkit t)
+  (lsp-ui-sideline-enable t)
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-border "orange")
+  :hook (lsp-mode . lsp-ui-mode))
+
+;; Auto complete
+(use-package
+  company
+  :ensure t
+  :defer t
+  :hook (prog-mode . company-mode)
+  :init ;; Don't convert to downcase.
+  (setq-default company-dabbrev-downcase nil)
+  :bind (("C-<tab>" . company-complete-common)
+         ;;
+         :map company-active-map        ;
+         ("C-n" . company-select-next)
+         ("C-p" . company-select-previous)
+         ("C-s" . company-filter-candidates)
+         ("<tab>" . company-complete-selection)
+         ("TAB" . company-complete-selection)
+         ("<return>" . company-complete-selection) ; 终端下无效
+         ("RET" . company-complete-selection)      ; 终端下生效
+         ;; :map company-filter-map                   ;
+         ("C-n" . company-select-next)
+         ("C-p" . company-select-previous)
+         ("<tab>" . company-complete-selection)
+         ("TAB" . company-complete-selection)
+         ("<return>" . company-complete-selection) ; 终端下无效
+         ("RET" . company-complete-selection)      ; 终端下生效
+         :map company-search-map                   ;
+         ("C-n" . company-select-next)
+         ("C-p" . company-select-previous)
+         ("<tab>" . company-complete-selection)
+         ("TAB" . company-complete-selection)
+         ("<return>" . company-complete-selection) ; 终端下无效
+         ("RET" . company-complete-selection)      ; 终端下生效
+         )
+  :custom                               ;
+  (company-minimum-prefix-length 1)
+  :config                               ;
+  (setq company-backends '((company-capf :with company-yasnippet)
+                           (company-dabbrev-code company-keywords company-files)
+                           (company-dabbrev)))
+  (setq company-frontends '(company-pseudo-tooltip-frontend company-echo-metadata-frontend)))
+
+(use-package
+  yasnippet
+  :ensure t
+  :defer t
+  :hook (company-mode . yas-minor-mode)
+  :config                               ;
+  (yas-reload-all))
+(use-package
+  yasnippet-snippets
+  :ensure t
+  :config (yas-reload-all))
+
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024)
+      treemacs-space-between-root-nodes nil
+      company-minimum-prefix-length 1
+      lsp-idle-delay 0.1 ;; clangd is fast
+      ;; be more ide-ish
+      lsp-headerline-breadcrumb-enable t)
 
 (defvar cmd nil nil)
 (defvar cflow-buf nil nil)

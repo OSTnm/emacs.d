@@ -109,6 +109,10 @@ Drag and drop images to emacs org-mode.
 * [which-key](https://github.com/justbur/emacs-which-key)
 Display available key bindings in popup. Rewrite of guide-key with added features to improve display.
 
+### Package Configuration
+* [use-package](https://github.com/jwiegley/use-package)
+A declaration macro to isolate package configuration in a way that is performance-oriented and tidy.
+
 ## Useful scripts
 * [bing-dict-ee](./lisp/init-packages.el) + [translate](./bin/translate.py)
 Bing translator in buffer.
