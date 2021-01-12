@@ -16,19 +16,22 @@
 ![Screenshot](./screenshots/layout.jpg)
 
 ### Table of Contents
-* [Plugin](#plugin)
-  + [Visual](#visual)
-  + [Framework](#framework)
-  + [Config Management](#config-management)
-  + [Editing](#editing)
-  + [Programming](#programming)
-  + [Completion](#completion)
-  + [Error Checking](#error-checking)
-  + [Search](#search)
-  + [Version control](#version-control)
-  + [Org](#org)
-* [Useful script](#useful-script)
-* [Depdency](#depdency)
+- [Plugin](#plugin)
+  * [Visual](#visual)
+  * [Framework](#framework)
+  * [Config Management](#config-management)
+  * [Editing](#editing)
+  * [Programming](#programming)
+  * [Completion](#completion)
+  * [Error Checking](#error-checking)
+  * [Search](#search)
+  * [Version control](#version-control)
+  * [Org](#org)
+  * [Keys Cheat Sheet](#keys-cheat-sheet)
+  * [Package Configuration](#package-configuration)
+  * [Interface Enhancement](#interface-enhancement)
+- [Useful scripts](#useful-scripts)
+- [Dependency](#dependency)
 
 ## Plugin
 ### Visual
@@ -80,6 +83,8 @@ Emacs client for the Language Server Protocol.
 Execute editing buffer.
 * [smartparens](https://github.com/Fuco1/smartparens)
 Deals with parens pairs and tries to be smart about it.
+* [verilog-mode](https://github.com/veripool/verilog-mode)
+Emacs major mode for verilog with Indentation, Hightlighting and AUTOs.
 
 ### Completion
 * [company](http://company-mode.github.io/)
@@ -112,6 +117,10 @@ Display available key bindings in popup. Rewrite of guide-key with added feature
 ### Package Configuration
 * [use-package](https://github.com/jwiegley/use-package)
 A declaration macro to isolate package configuration in a way that is performance-oriented and tidy.
+
+### Interface Enhancement
+* [dashboard](https://github.com/emacs-dashboard/emacs-dashboard)
+An extensible emacs startup screen showing you what’s most important.
 
 ## Useful scripts
 * [bing-dict-ee](./lisp/init-packages.el) + [translate](./bin/translate.py)

@@ -20,4 +20,5 @@
 (setq mc/cmds-to-run-once
       '(
         iedit-switch-to-mc-mode
+        undo-tree-visualize
         ))

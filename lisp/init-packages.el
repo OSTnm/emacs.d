@@ -253,4 +253,11 @@
 (require 'ox)
 (require 'ox-org)
 
+;; dashboard
+(require 'dashboard)
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+
 (provide 'init-packages)

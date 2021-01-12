@@ -1,0 +1,20 @@
+;; -*- emacs-lisp -*- <20/12/24 00:05:02 /Users/xuali2/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; Run `M-x tramp-cleanup-all-connections' instead.
+
+(((tramp-file-name "ssh" "xuali2" nil "sha-isbu-edit20" nil nil nil)
+  ("uname" "Linux 4.18.0-193.6.3.el8_2.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("pipe-buf" 4096)
+  ("remote-shell" "/bin/sh")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 25)
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("file-exists" "test -e")
+  ("gid-string" "eng")
+  ("readlink" "\\readlink")
+  ("case-insensitive" nil)
+  ("env-u-option" t)))
