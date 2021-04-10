@@ -135,16 +135,7 @@
               ([remap xref-find-definitions] . lsp-find-definition)
               ([remap xref-find-references] . lsp-find-references)
               ("C-S-<down-mouse-1>" . xref-pop-marker-stack)
-              ("C-S-<mouse-1>" . ignore)
-              ("C-s l .:" . lsp-find-definition)
-              ("C-s l ," . xref-pop-marker-stack)
-              ("C-s l ?" . lsp-find-references)
-              ("C-s l d" . lsp-find-declaration)
-              ("C-s l i" . lsp-find-implementation)
-              ("C-s l t" . lsp-find-type-definition)
-              ("C-s l g" . lsp-find-definition)
-              ("C-s l r" . lsp-find-references)
-              ("C-s l h" . lsp-describe-thing-at-point))
+              ("C-S-<mouse-1>" . ignore))
   )
 
 (use-package
