@@ -85,6 +85,14 @@ Execute editing buffer.
 Deals with parens pairs and tries to be smart about it.
 * [verilog-mode](https://github.com/veripool/verilog-mode)
 Emacs major mode for verilog with Indentation, Hightlighting and AUTOs.
+* [json-mode](https://github.com/joshwnj/json-mode)
+Major mode for editing JSON files.
+* [json-reformat](https://github.com/gongo/json-reformat)
+Reformat tool for JSON.
+* [json-snatcher](https://github.com/Sterlingg/json-snatcher)
+Snatch the path to this value on a large JSON file.
+* [yang-mode](https://github.com/mbj4668/yang-mode)
+Emacs mode for YANG (RFC 7950).
 
 ### Completion
 * [company](http://company-mode.github.io/)
