@@ -8,6 +8,7 @@
         c-electric-slash
         hungry-delete-backward
         hungry-delete-forward
+        indent-for-tab-command
         org-beginning-of-line
         org-cycle
         org-end-of-line
