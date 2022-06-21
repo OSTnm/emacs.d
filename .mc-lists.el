@@ -6,6 +6,7 @@
         c-electric-brace
         c-electric-semi&comma
         c-electric-slash
+        helm-confirm-and-exit-minibuffer
         hungry-delete-backward
         hungry-delete-forward
         indent-for-tab-command
@@ -21,5 +22,6 @@
 (setq mc/cmds-to-run-once
       '(
         iedit-switch-to-mc-mode
+        org-delete-char
         undo-tree-visualize
         ))

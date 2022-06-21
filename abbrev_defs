@@ -1,137 +1,133 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'Info-edit-mode-abbrev-table '())
-
 (define-abbrev-table 'Rd-mode-abbrev-table
   '(
-    ("`ag" "\\arguments" nil 0)
-    ("`al" "\\alias" nil 0)
-    ("`au" "\\author" nil 0)
-    ("`bf" "\\bold" nil 0)
-    ("`co" "\\code" nil 0)
-    ("`de" "\\describe" nil 0)
-    ("`dn" "\\description" nil 0)
-    ("`dt" "\\details" nil 0)
-    ("`em" "\\emph" nil 0)
-    ("`en" "\\enumerate" nil 0)
-    ("`ex" "\\examples" nil 0)
-    ("`fi" "\\file" nil 0)
-    ("`fo" "\\format" nil 0)
-    ("`it" "\\item" nil 0)
-    ("`iz" "\\itemize" nil 0)
-    ("`kw" "\\keyword" nil 0)
-    ("`li" "\\link" nil 0)
-    ("`me" "\\method" nil 0)
-    ("`na" "\\name" nil 0)
-    ("`no" "\\note" nil 0)
-    ("`re" "\\references" nil 0)
-    ("`sa" "\\seealso" nil 0)
-    ("`se" "\\section" nil 0)
-    ("`so" "\\source" nil 0)
-    ("`ss" "\\subsection" nil 0)
-    ("`sy" "\\synopsis" nil 0)
-    ("`ta" "\\tabular" nil 0)
-    ("`ti" "\\title" nil 0)
-    ("`us" "\\usage" nil 0)
-    ("`va" "\\value" nil 0)
+    ("`ag" "\\arguments" nil :count 0)
+    ("`al" "\\alias" nil :count 0)
+    ("`au" "\\author" nil :count 0)
+    ("`bf" "\\bold" nil :count 0)
+    ("`co" "\\code" nil :count 0)
+    ("`de" "\\describe" nil :count 0)
+    ("`dn" "\\description" nil :count 0)
+    ("`dt" "\\details" nil :count 0)
+    ("`em" "\\emph" nil :count 0)
+    ("`en" "\\enumerate" nil :count 0)
+    ("`ex" "\\examples" nil :count 0)
+    ("`fi" "\\file" nil :count 0)
+    ("`fo" "\\format" nil :count 0)
+    ("`it" "\\item" nil :count 0)
+    ("`iz" "\\itemize" nil :count 0)
+    ("`kw" "\\keyword" nil :count 0)
+    ("`li" "\\link" nil :count 0)
+    ("`me" "\\method" nil :count 0)
+    ("`na" "\\name" nil :count 0)
+    ("`no" "\\note" nil :count 0)
+    ("`re" "\\references" nil :count 0)
+    ("`sa" "\\seealso" nil :count 0)
+    ("`se" "\\section" nil :count 0)
+    ("`so" "\\source" nil :count 0)
+    ("`ss" "\\subsection" nil :count 0)
+    ("`sy" "\\synopsis" nil :count 0)
+    ("`ta" "\\tabular" nil :count 0)
+    ("`ti" "\\title" nil :count 0)
+    ("`us" "\\usage" nil :count 0)
+    ("`va" "\\value" nil :count 0)
    ))
 
-(define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
-
-(define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
-
-(define-abbrev-table 'calendar-mode-abbrev-table '())
-
-(define-abbrev-table 'change-log-mode-abbrev-table '())
-
-(define-abbrev-table 'comint-mode-abbrev-table '())
-
-(define-abbrev-table 'completion-list-mode-abbrev-table '())
-
-(define-abbrev-table 'debugger-mode-abbrev-table '())
-
-(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
-
-(define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
-
-(define-abbrev-table 'emacs-lisp-byte-code-mode-abbrev-table '())
-
-(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'eshell-mode-abbrev-table '())
-
-(define-abbrev-table 'ess-julia-mode-abbrev-table '())
-
-(define-abbrev-table 'flycheck-error-list-mode-abbrev-table '())
-
-(define-abbrev-table 'fundamental-mode-abbrev-table '())
-
-(define-abbrev-table 'global-abbrev-table '())
-
-(define-abbrev-table 'grep-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-grep-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-major-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-moccur-mode-abbrev-table '())
-
-(define-abbrev-table 'help-mode-abbrev-table '())
-
-(define-abbrev-table 'ibuffer-mode-abbrev-table '())
-
-(define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
-
-(define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
-
-(define-abbrev-table 'inferior-julia-mode-abbrev-table '())
-
-(define-abbrev-table 'julia-mode-abbrev-table '())
-
-(define-abbrev-table 'lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'log-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'message-mode-abbrev-table '())
-
-(define-abbrev-table 'messages-buffer-mode-abbrev-table '())
-
-(define-abbrev-table 'occur-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'occur-mode-abbrev-table '())
-
-(define-abbrev-table 'org-mode-abbrev-table '())
-
-(define-abbrev-table 'outline-mode-abbrev-table '())
-
-(define-abbrev-table 'package-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'process-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'prog-mode-abbrev-table '())
-
-(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
-
-(define-abbrev-table 'shell-mode-abbrev-table '())
-
-(define-abbrev-table 'snippet-mode-abbrev-table '())
-
-(define-abbrev-table 'special-mode-abbrev-table '())
-
-(define-abbrev-table 'speedbar-mode-abbrev-table '())
-
-(define-abbrev-table 'tabulated-list-mode-abbrev-table '())
-
-(define-abbrev-table 'tar-mode-abbrev-table '())
-
-(define-abbrev-table 'term-mode-abbrev-table '())
-
-(define-abbrev-table 'text-mode-abbrev-table '())
-
-(define-abbrev-table 'url-cookie-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
+(define-abbrev-table 'asn1-mode-abbrev-table
+  '(
+    ("a" "ALL" nil :count 0)
+    ("ab" "ABSENT" nil :count 0)
+    ("ap" "APPLICATION" nil :count 0)
+    ("as" "ABSTRACT-SYNTAX" nil :count 0)
+    ("au" "AUTOMATIC" nil :count 0)
+    ("b" "BY" nil :count 0)
+    ("be" "BEGIN" nil :count 0)
+    ("bi" "BIT" nil :count 0)
+    ("bm" "BMPString" nil :count 0)
+    ("bo" "BOOLEAN" nil :count 0)
+    ("c" "CLASS" nil :count 0)
+    ("ch" "CHOICE" nil :count 0)
+    ("cha" "CHARACTER" nil :count 0)
+    ("co" "COMPONENT" nil :count 0)
+    ("com" "COMPONENTS" nil :count 0)
+    ("con" "CONTAINING" nil :count 0)
+    ("cons" "CONSTRAINED" nil :count 0)
+    ("d" "DATE" nil :count 0)
+    ("de" "DEFAULT" nil :count 0)
+    ("def" "DEFINITIONS" nil :count 0)
+    ("dt" "DATE-TIME" nil :count 0)
+    ("du" "DURATION" nil :count 0)
+    ("e" "END" nil :count 0)
+    ("ec" "ENCODING-CONTROL" nil :count 0)
+    ("em" "EMBEDDED" nil :count 0)
+    ("en" "ENCODED" nil :count 0)
+    ("enu" "ENUMERATED" nil :count 0)
+    ("ex" "EXCEPT" nil :count 0)
+    ("exp" "EXPORTS" nil :count 0)
+    ("expl" "EXPLICIT" nil :count 0)
+    ("ext" "EXTERNAL" nil :count 0)
+    ("exte" "EXTENSIBILITY" nil :count 0)
+    ("f" "FROM" nil :count 0)
+    ("fa" "FALSE" nil :count 0)
+    ("g" "GeneralString" nil :count 0)
+    ("ge" "GeneralizedTime" nil :count 0)
+    ("gr" "GraphicString" nil :count 0)
+    ("i" "IMPLIED" nil :count 0)
+    ("ia" "IA5String" nil :count 0)
+    ("ib" "IDENTIFIED BY" nil :count 0)
+    ("id" "IDENTIFIER" nil :count 0)
+    ("im" "IMPORTS" nil :count 0)
+    ("imp" "IMPLICIT" nil :count 0)
+    ("in" "INTEGER" nil :count 0)
+    ("inc" "INCLUDES" nil :count 0)
+    ("ins" "INSTANCE" nil :count 0)
+    ("inst" "INSTRUCTIONS" nil :count 0)
+    ("int" "INTERSECTION" nil :count 0)
+    ("is" "ISO646String" nil :count 0)
+    ("m" "MAX" nil :count 0)
+    ("mi" "MIN" nil :count 0)
+    ("min" "MINUS-INFINITY" nil :count 0)
+    ("n" "NULL" nil :count 0)
+    ("nan" "NOT-A-NUMBER" nil :count 0)
+    ("nu" "NumericString" nil :count 0)
+    ("o" "OF" nil :count 0)
+    ("ob" "OBJECT" nil :count 0)
+    ("obj" "ObjectDescriptor" nil :count 0)
+    ("oc" "OCTET" nil :count 0)
+    ("oi" "OID-IRI" nil :count 0)
+    ("oid" "OBJECT IDENTIFIER" nil :count 0)
+    ("op" "OPTIONAL" nil :count 0)
+    ("p" "PDV" nil :count 0)
+    ("pa" "PATTERN" nil :count 0)
+    ("pi" "PLUS-INFINITY" nil :count 0)
+    ("pr" "PRESENT" nil :count 0)
+    ("pri" "PRIVATE" nil :count 0)
+    ("prin" "PrintableString" nil :count 0)
+    ("r" "REAL" nil :count 0)
+    ("ro" "RELATIVE-OID" nil :count 0)
+    ("roi" "RELATIVE-OID-IRI" nil :count 0)
+    ("s" "SET" nil :count 0)
+    ("se" "SEQUENCE" nil :count 0)
+    ("set" "SETTINGS" nil :count 0)
+    ("si" "SIZE" nil :count 0)
+    ("st" "STRING" nil :count 0)
+    ("sy" "SYNTAX" nil :count 0)
+    ("t" "TAGS" nil :count 0)
+    ("t6" "T61String" nil :count 0)
+    ("te" "TeletexString" nil :count 0)
+    ("ti" "TIME" nil :count 0)
+    ("tid" "TYPE-IDENTIFIER" nil :count 0)
+    ("tod" "TIME-OF-DAY" nil :count 0)
+    ("tr" "TRUE" nil :count 0)
+    ("u" "UNION" nil :count 0)
+    ("un" "UNIQUE" nil :count 0)
+    ("uni" "UNIVERSAL" nil :count 0)
+    ("univ" "UniversalString" nil :count 0)
+    ("ut" "UTCTime" nil :count 0)
+    ("utf" "UTF8String" nil :count 0)
+    ("v" "VisibleString" nil :count 0)
+    ("vi" "VideotexString" nil :count 0)
+    ("w" "WITH" nil :count 0)
+    ("ws" "WITH SYNTAX" nil :count 0)
+   ))
 

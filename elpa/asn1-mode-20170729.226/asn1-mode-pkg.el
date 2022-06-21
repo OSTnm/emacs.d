@@ -1,0 +1,2 @@
+;;; Generated package description from asn1-mode.el  -*- no-byte-compile: t -*-
+(define-package "asn1-mode" "20170729.226" "ASN.1/GDMO mode for GNU Emacs" '((emacs "24.3") (s "1.10.0")) :commit "d5d4a8259daf708411699bcea85d322f18beb972" :authors '(("Taichi Kawabata <kawabata.taichi_at_gmail.com>")) :maintainer '("Taichi Kawabata <kawabata.taichi_at_gmail.com>") :keywords '("languages" "processes" "tools") :url "https://github.com/kawabata/asn1-mode/")

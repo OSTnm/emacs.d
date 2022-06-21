@@ -93,6 +93,15 @@ Reformat tool for JSON.
 Snatch the path to this value on a large JSON file.
 * [yang-mode](https://github.com/mbj4668/yang-mode)
 Emacs mode for YANG (RFC 7950).
+* [yaml-mode](https://github.com/yoshiki/yaml-mode)
+Simple major mode to edit YAML file for emacs
+* [protobuf-mode](https://github.com/protocolbuffers/protobuf)
+Major mode for editing protocol buffers
+* [meson-mode](https://github.com/wentasah/meson-mode)
+Emacs editor major mode for the Meson build system files
+* [cmake-mode](https://github.com/Kitware/CMake/tree/master/Auxiliary)
+Major mode for cmake
+
 
 ### Completion
 * [company](http://company-mode.github.io/)

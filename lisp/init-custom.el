@@ -6,8 +6,9 @@
  '(company-auto-commit nil)
  '(company-dabbrev-downcase nil)
  '(company-eclim-executable nil)
+ '(company-insertion-on-trigger nil)
  '(company-minimum-prefix-length 1)
- '(company-show-numbers t)
+ '(company-show-quick-access t)
  '(company-tooltip-idle-delay 0.08)
  '(custom-safe-themes
    '("d3a406c5905923546d8a3ad0164a266deaf451856eca5f21b36594ffcb08413a" "c59857e3e950131e0c17c65711f1812d20a54b829115b7c522672ae6ba0864cc" default))
@@ -31,7 +32,6 @@
  '(lsp-auto-execute-action nil)
  '(lsp-headerline-breadcrumb-enable t)
  '(lsp-idle-delay 0.1)
- '(lsp-ui-doc-position 'bottom t)
  '(org-emphasis-alist
    '(("*" bold)
      ("/" italic)
@@ -42,7 +42,7 @@
       (:strike-through t))))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
-   '(json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
+   '(cmake-mode meson-mode protobuf-mode yaml-mode asn1-mode json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
  '(rainbow-identifiers-choose-face-function 'ostnm/rainbow-identifiers-predefined-choose-face)
  '(yas-inhibit-overlay-modification-protection t))
 (custom-set-faces
@@ -50,6 +50,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(font-lock-function-name-face ((t (:foreground "#A6E22E" :weight bold :height 1.3))))
  '(imenu-list-entry-face-0 ((t (:inherit imenu-list-entry-face :foreground "light green"))))
  '(imenu-list-entry-face-1 ((t (:inherit imenu-list-entry-face :foreground "gold")))))
