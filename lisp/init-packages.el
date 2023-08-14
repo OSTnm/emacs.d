@@ -40,8 +40,8 @@
 (global-flycheck-mode)
 
 ;; helm mode
-(require 'helm-config)
-(helm-mode t)
+;; (require 'helm-config)
+;; (helm-mode t)
 
 ;; helm-gtags
 (require 'helm-gtags)

@@ -29,8 +29,8 @@
  '(imenu-list-position 'left)
  '(imenu-list-size 0.1)
  '(lsp-auto-execute-action nil)
- '(lsp-headerline-breadcrumb-enable t)
- '(lsp-idle-delay 0.1)
+ '(lsp-headerline-breadcrumb-enable t t)
+ '(lsp-idle-delay 0.1 t)
  '(org-emphasis-alist
    '(("*" bold)
      ("/" italic)
@@ -41,7 +41,7 @@
       (:strike-through t))))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
-   '(auto-package-update cmake-mode meson-mode protobuf-mode yaml-mode asn1-mode json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
+   '(magit auto-package-update cmake-mode meson-mode protobuf-mode yaml-mode asn1-mode json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
  '(rainbow-identifiers-choose-face-function 'ostnm/rainbow-identifiers-predefined-choose-face)
  '(yas-inhibit-overlay-modification-protection t))
 (custom-set-faces
