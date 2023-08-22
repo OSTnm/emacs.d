@@ -41,7 +41,7 @@
 
 ;; helm mode
 ;; (require 'helm-config)
-;; (helm-mode t)
+(helm-mode t)
 
 ;; helm-gtags
 (require 'helm-gtags)

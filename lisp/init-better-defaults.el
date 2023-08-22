@@ -2,7 +2,7 @@
 (setq ring-bell-function 'ignore)
 
 ;; show linum
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 
 ;; show column
 (column-number-mode t)
