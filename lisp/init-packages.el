@@ -251,4 +251,9 @@
   :config
   (dashboard-setup-startup-hook))
 
+(add-to-list 'load-path "~/.emacs.d/elpa/copilot.el")
+(require 'copilot)
+
+(add-hook 'prog-mode-hook 'copilot-mode)
+
 (provide 'init-packages)

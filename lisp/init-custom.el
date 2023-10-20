@@ -41,8 +41,9 @@
       (:strike-through t))))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
-   '(magit auto-package-update cmake-mode meson-mode protobuf-mode yaml-mode asn1-mode json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
+   '(editorconfig magit auto-package-update cmake-mode meson-mode protobuf-mode yaml-mode asn1-mode json-mode yang-mode dashboard markdown-toc use-package hide-mode-line lsp-treemacs lsp-ui helm-ls-git which-key quickrun helm-company company company-box multiple-cursors org-download rainbow-delimiters smartparens undo-tree hungry-delete yasnippet-snippets monokai-theme move-text goto-line-preview window-numbering helm-gtags helm-c-yasnippet helm-ag column-enforce-mode bug-hunter))
  '(rainbow-identifiers-choose-face-function 'ostnm/rainbow-identifiers-predefined-choose-face)
+ '(rst-indent-comment 4)
  '(yas-inhibit-overlay-modification-protection t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
