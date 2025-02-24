@@ -72,6 +72,7 @@
 ;; tab settings
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+(add-hook 'c-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (setq-default c-basic-offset 4)
 
 ;; delete trailing-whitespace mathching by regxp in certatin dir
