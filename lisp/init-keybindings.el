@@ -90,4 +90,12 @@
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
 
+;; lsp mode keybindings
+(with-eval-after-load 'lsp-mode
+  (define-key lsp-mode-map (kbd "M-n") 'lsp-find-definition)
+  (define-key lsp-mode-map (kbd "M-p") 'lsp-find-references)
+  (define-key lsp-mode-map (kbd "M-[") 'xref-go-back)
+  (define-key lsp-mode-map (kbd "M-]") 'xref-go-forward)
+  (define-key lsp-mode-map [remap xref-find-apropos] 'helm-lsp-workspace-symbol))
+
 (provide 'init-keybindings)

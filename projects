@@ -1,3 +1,4 @@
 ;;; -*- lisp-data -*-
-(("/Users/xuali2/.emacs.d/")
+(("/Users/xuali2/.emacs.d/elpa/claude-code/")
+ ("/Users/xuali2/.emacs.d/")
  ("/Users/xuali2/.emacs.d/elpa/claude-code-ide/"))

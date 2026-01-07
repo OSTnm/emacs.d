@@ -1,6 +1,19 @@
 ;; load theme
-(require 'monokai-theme)
-(load-theme 'monokai t)
+(use-package doom-themes
+  :ensure t
+  :config
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  (load-theme 'doom-monokai-pro t)
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  ;; Corrects (and improves) org-mode's native fontification
+  (doom-themes-org-config))
+
+;; Make /* */ comments as visible as /** */ comments
+(set-face-attribute 'font-lock-comment-face nil
+                    :foreground (face-foreground 'font-lock-doc-face)
+                    :slant 'italic)
 
 ;; window-numbering
 (require 'window-numbering)
@@ -55,6 +68,26 @@
 ;; auto load init file
 (global-auto-revert-mode t)
 
+;; TRAMP configuration for remote development
+(require 'tramp)
+(setq tramp-default-method "ssh")
+(setq tramp-verbose 1)
+(setq tramp-use-ssh-controlmaster-options nil)
+;; Performance optimizations for TRAMP
+(setq remote-file-name-inhibit-cache nil)
+(setq tramp-completion-reread-directory-timeout nil)
+(setq vc-ignore-dir-regexp
+      (format "\\(%s\\)\\|\\(%s\\)"
+              vc-ignore-dir-regexp
+              tramp-file-name-regexp))
+;; Keep SSH connections alive
+(setq tramp-ssh-controlmaster-options
+      (concat "-o ControlPath=/tmp/ssh-%%r@%%h:%%p "
+              "-o ControlMaster=auto "
+              "-o ControlPersist=yes"))
+;; Disable version control for remote files (speeds up TRAMP)
+(setq vc-handled-backends '(Git))
+
 (defun my-toggle-web-indent ()
   (interactive)
   ;; web development
@@ -107,26 +140,63 @@
   :ensure t
   :defer t
   :hook ((lsp-mode . lsp-enable-which-key-integration))
-  :init ;;
-  ;; (setq lsp-auto-configure nil)
+  :init
+  ;; Performance optimizations
+  (setq lsp-idle-delay 0.1)
+  (setq lsp-enable-file-watchers nil)
+  (setq lsp-keep-workspace-alive t)
+  (setq lsp-log-io nil)
+  (setq lsp-print-performance nil)
+
+  ;; Completion settings
   (setq lsp-prefer-capf t)
+  (setq lsp-completion-provider :none)
   (setq lsp-enable-snippet t)
   (setq lsp-enable-completion-at-point t)
+
+  ;; UI enhancements
+  (setq lsp-headerline-breadcrumb-enable t)
+  (setq lsp-lens-enable t)
+  (setq lsp-modeline-code-actions-enable t)
+  (setq lsp-modeline-diagnostics-enable t)
+  (setq lsp-signature-auto-activate t)
+  (setq lsp-signature-render-documentation t)
+  (setq lsp-semantic-tokens-enable t)
+  (setq lsp-enable-symbol-highlighting t)
+
+  ;; Code intelligence
+  (setq lsp-enable-indentation t)
+  (setq lsp-enable-on-type-formatting t)
+  (setq lsp-enable-folding t)
+  (setq lsp-enable-links t)
+  (setq lsp-enable-imenu t)
+
+  ;; Session management
+  (setq lsp-restart 'auto-restart)
+  (setq lsp-auto-guess-root t)
+
+  ;; Clangd-specific settings for C/C++
+  (setq lsp-clients-clangd-args
+        '("--header-insertion=never"
+          "--compile-commands-dir=build"
+          "--clang-tidy"
+          "--completion-style=detailed"
+          "--background-index"
+          "--pch-storage=memory"))
+
   (setq lsp-keymap-prefix "C-c s")
   (add-hook 'c++-mode-hook #'lsp)
   (add-hook 'c-mode-hook #'lsp)
-  (setq lsp-keep-workspace-alive t)
-  (setq lsp-enable-file-watchers nil)
-  :bind (:map lsp-mode-map
-              ([remap xref-find-definitions] . lsp-find-definition)
-              ([remap xref-find-references] . lsp-find-references)
-              ("C-M-<" . xref-pop-marker-stack)
-              ("C-S-<mouse-1>" . ignore))
-  )
+  :config
+  ;; Remote development via TRAMP (in :config after lsp-mode loads)
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-tramp-connection "clangd")
+                    :major-modes '(c-mode c++-mode)
+                    :remote? t
+                    :server-id 'clangd-remote)))
 
 ;; helm-lsp mode
 (require 'helm-lsp)
-(define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
 
 ;; Auto complete
 (use-package
@@ -184,10 +254,7 @@
 (setq gc-cons-threshold (* 100 1024 1024)
       read-process-output-max (* 1024 1024)
       treemacs-space-between-root-nodes nil
-      company-minimum-prefix-length 1
-      lsp-idle-delay 0.1 ;; clangd is fast
-      ;; be more ide-ish
-      lsp-headerline-breadcrumb-enable t)
+      company-minimum-prefix-length 1)
 
 (defvar cmd nil nil)
 (defvar cflow-buf nil nil)
@@ -229,11 +296,17 @@
   :config
   (dashboard-setup-startup-hook))
 
+;; Install eat terminal emulator required by claude-code
+(use-package eat
+  :ensure t)
+
+;; Install claude-code package required by ai-code github-copilot-cli backend
+(use-package claude-code
+  :vc (:url "https://github.com/stevemolitor/claude-code.el"))
+
 (use-package ai-code
   :config
   (ai-code-set-backend  'github-copilot-cli) ;; use copilot-cli as backend
-  ;; Enable global keybinding for the main menu
-  (global-set-key (kbd "C-c a") #'ai-code-menu)
   ;; Optional: Use vterm if you prefer, by default it is eat
   ;; (setq claude-code-terminal-backend 'vterm) ;; for openai codex, github copilot cli, opencode; for claude-code-ide.el and gemini-cli.el, you can check their config
   ;; Optional: Turn on auto-revert buffer, so that the AI code change automatically appears in the buffer
@@ -241,6 +314,17 @@
   (setq auto-revert-interval 1) ;; set to 1 second for faster update
   ;; Optional: Set up Magit integration for AI commands in Magit popups
   (with-eval-after-load 'magit
-    (ai-code-magit-setup-transients)))
+    (ai-code-magit-setup-transients))
+
+  ;; IMPORTANT: Workflow for using ai-code with GitHub Copilot CLI:
+  ;; 1. First start a CLI session with: M-x ai-code-menu (C-c a) then 'c' for "Start CLI"
+  ;;    OR directly: M-x ai-code-start-cli
+  ;; 2. This creates a buffer like *claude:/path/to/project* running GitHub Copilot CLI
+  ;; 3. Keep this buffer alive (don't kill it)
+  ;; 4. Now you can use commands like "change code", "implement TODO", etc.
+  ;; 5. If you get "claude is not running", it means the CLI buffer was closed or not found
+  ;;    - Check for buffers starting with *claude:* using M-x ibuffer or M-x list-buffers
+  ;;    - Restart the CLI session if needed
+  )
 
 (provide 'init-packages)
