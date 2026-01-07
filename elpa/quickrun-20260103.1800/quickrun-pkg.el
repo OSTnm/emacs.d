@@ -1,0 +1,11 @@
+;; -*- no-byte-compile: t; lexical-binding: nil -*-
+(define-package "quickrun" "20260103.1800"
+  "Run commands quickly."
+  '((emacs "26.1")
+    (ht    "2.0"))
+  :url "https://github.com/emacsorphanage/quickrun"
+  :commit "9199e222f95104ee83e115a9d5ac159d86816706"
+  :revdesc "9199e222f951"
+  :keywords '("tools")
+  :authors '(("Syohei YOSHIDA" . "syohex@gmail.com"))
+  :maintainers '(("Jen-Chieh Shen" . "jcs090218@gmail.com")))

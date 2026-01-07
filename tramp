@@ -1,42 +1,8 @@
-;; -*- emacs-lisp -*- <25/02/24 15:24:04 ~/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <26/01/07 14:06:03 ~/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; Run `M-x tramp-cleanup-all-connections' instead.
 
 (((tramp-file-name "cache" nil nil nil nil nil nil)
-  ("tramp-version" "2.6.3"))
- ((tramp-file-name "ssh" nil nil "sha-isbu-edit20" nil nil nil)
-  ("null-device" "/dev/null")
-  ("uname" "Linux 4.18.0-513.9.1.el8_9.x86_64")
-  ("locale" "LC_ALL=en_US.utf8")
-  ("test" "test")
-  ("remote-path"
-   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
-  ("pipe-buf" 4096)
-  ("remote-shell" "/bin/sh")
-  ("~" "/users/xuali2")
-  ("file-exists" "test -e")
-  ("stat" "env QUOTING_STYLE=locale \\stat")
-  ("id" "/usr/bin/id")
-  ("uid-integer" 416863)
-  ("uid-string" "xuali2")
-  ("gid-integer" 25)
-  ("gid-string" "eng")
-  ("groups-integer"
-   (25 1000000349 1000002556 1000005179 1000005519 1000005709 1000006190))
-  ("groups-string"
-   ("eng" "cat6k_offline" "pds-diag-ad-group" "stash_sjc_shared3" "blue-rommon-dev" "diagall" "chg_crdc_od"))
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl5")
-  ("inotifywait" nil)
-  ("gio-monitor" "/usr/bin/gio")
-  ("case-insensitive" nil)
-  ("readlink" "\\readlink")
-  ("bzr" nil)
-  ("git" "\\git")
-  ("hg" nil)
-  ("ls" "/usr/bin/ls --color=never")
-  ("ls--quoting-style=literal --show-control-chars" "--quoting-style=literal --show-control-chars")
-  ("ls--dired" "--dired")
-  ("df-blocksize" 1)
-  ("df" "\\df --block-size=1 --output=size,used,avail")))
+  ("tramp-version" "2.7.3.30.2"))
+ ((tramp-file-name "ssh" nil nil "sjc-ads-5117" nil nil nil) nil)
+ ((tramp-file-name "ssh" nil nil "sha-isbu-edit20" nil nil nil) nil))

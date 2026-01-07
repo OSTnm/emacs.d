@@ -90,8 +90,4 @@
 (require 'goto-line-preview)
 (global-set-key [remap goto-line] 'goto-line-preview)
 
-;; copilot
-(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
-(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
-
 (provide 'init-keybindings)

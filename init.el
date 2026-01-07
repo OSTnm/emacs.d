@@ -23,7 +23,7 @@
 ;;(autoload 'garak "garak" nil t)
 
 ;; set env PATH
-(setenv "PATH" (concat "~/.emacs.d/bin:" (getenv "PATH")))
+(setenv "PATH" (concat "$HOME/.local/bin:~/.emacs.d/bin:" (getenv "PATH")))
 
 ;; set exec path
 (setq exec-path (split-string (getenv "PATH") ":"))
@@ -44,3 +44,17 @@
 (load-file custom-file)
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-vc-selected-packages
+   '((claude-code-ide :url
+		      "https://github.com/manzaltu/claude-code-ide.el"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -36,8 +36,8 @@
 (setq company-auto-complete 'company-explicit-action-p)
 
 ;; flycheck
-(require 'flycheck)
-(global-flycheck-mode)
+;; (require 'flycheck)
+;; (global-flycheck-mode)
 
 ;; helm mode
 ;; (require 'helm-config)
@@ -102,18 +102,6 @@
 (add-hook 'dired-mode-hook 'org-download-enable)
 
 ;; lsp mode
-(add-hook 'c-mode-hook 'lsp)
-(add-hook 'cpp-mode-hook 'lsp)
-
-(setq gc-cons-threshold (* 100 1024 1024)
-      read-process-output-max (* 1024 1024)
-      treemacs-space-between-root-nodes nil
-      company-minimum-prefix-length 1
-      lsp-idle-delay 0.1 ;; clangd is fast
-      ;; be more ide-ish
-      lsp-headerline-breadcrumb-enable t)
-
-;; lsp mode
 (use-package
   lsp-mode
   :ensure t
@@ -129,26 +117,16 @@
   (add-hook 'c-mode-hook #'lsp)
   (setq lsp-keep-workspace-alive t)
   (setq lsp-enable-file-watchers nil)
-  (setq lsp-enable-semantic-highlighting nil)
-  (setq lsp-enable-symbol-highlighting nil)
   :bind (:map lsp-mode-map
               ([remap xref-find-definitions] . lsp-find-definition)
               ([remap xref-find-references] . lsp-find-references)
-              ("C-S-<down-mouse-1>" . xref-pop-marker-stack)
+              ("C-M-<" . xref-pop-marker-stack)
               ("C-S-<mouse-1>" . ignore))
   )
 
-(use-package
-  lsp-ui
-  :ensure t
-  :after lsp-mode
-  :commands lsp-ui-mode
-  :custom (lsp-ui-doc-position (quote bottom))
-  ;; (lsp-ui-doc-use-webkit t)
-  (lsp-ui-sideline-enable t)
-  (lsp-ui-doc-enable t)
-  (lsp-ui-doc-border "orange")
-  :hook (lsp-mode . lsp-ui-mode))
+;; helm-lsp mode
+(require 'helm-lsp)
+(define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
 
 ;; Auto complete
 (use-package
@@ -251,9 +229,18 @@
   :config
   (dashboard-setup-startup-hook))
 
-(add-to-list 'load-path "~/.emacs.d/elpa/copilot.el")
-(require 'copilot)
-
-(add-hook 'prog-mode-hook 'copilot-mode)
+(use-package ai-code
+  :config
+  (ai-code-set-backend  'github-copilot-cli) ;; use copilot-cli as backend
+  ;; Enable global keybinding for the main menu
+  (global-set-key (kbd "C-c a") #'ai-code-menu)
+  ;; Optional: Use vterm if you prefer, by default it is eat
+  ;; (setq claude-code-terminal-backend 'vterm) ;; for openai codex, github copilot cli, opencode; for claude-code-ide.el and gemini-cli.el, you can check their config
+  ;; Optional: Turn on auto-revert buffer, so that the AI code change automatically appears in the buffer
+  (global-auto-revert-mode 1)
+  (setq auto-revert-interval 1) ;; set to 1 second for faster update
+  ;; Optional: Set up Magit integration for AI commands in Magit popups
+  (with-eval-after-load 'magit
+    (ai-code-magit-setup-transients)))
 
 (provide 'init-packages)
